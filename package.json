@@ -1,6 +1,7 @@
 {
   "name": "reactjs-blog-web",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "author": "Pedro Capriles <caprilespe@outlook.com>",
   "description": "A reactjs ⚛️ application where try to refactoring and update the legacy project legacy-blog-web",
