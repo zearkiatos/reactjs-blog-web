@@ -1,6 +1,12 @@
 ## Description
 A reactjs ⚛️ application where try to refactoring and update the legacy project legacy-blog-web
 
+![Github](https://github.com/zearkiatos/reactjs-blog-web/actions/workflows/action.yml/badge.svg)
+
+## Project link
+
+Github: [https://zearkiatos.github.io/reactjs-blog-web/](https://zearkiatos.github.io/reactjs-blog-web/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
