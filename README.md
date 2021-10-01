@@ -2,10 +2,17 @@
 A reactjs ⚛️ application where try to refactoring and update the legacy project legacy-blog-web
 
 ![Github](https://github.com/zearkiatos/reactjs-blog-web/actions/workflows/action.yml/badge.svg)
+![GitlabCI](https://gitlab.com/caprilespe/reactjs-blog-web/badges/develop/pipeline.svg)
 
 ## Project link
 
+Netlify: [https://reactjs-blog-web.netlify.app/](https://reactjs-blog-web.netlify.app/)
+
+Vercel: [https://reactjs-blog-web.vercel.app/](https://reactjs-blog-web.vercel.app/)
+
 Github: [https://zearkiatos.github.io/reactjs-blog-web/](https://zearkiatos.github.io/reactjs-blog-web/)
+
+Gitlab🦊: [https://caprilespe.gitlab.io/reactjs-blog-web/](https://caprilespe.gitlab.io/reactjs-blog-web/)
 
 # Getting Started with Create React App
 
