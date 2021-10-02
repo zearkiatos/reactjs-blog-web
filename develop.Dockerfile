@@ -9,6 +9,7 @@ COPY . ./
 
 RUN npm install --silent
 RUN npm install react-scripts -g --silent
+RUN npx browserslist@latest --update-db
 RUN npm install nodemon -g --silent
 RUN npm install concurrently -g --silent
 

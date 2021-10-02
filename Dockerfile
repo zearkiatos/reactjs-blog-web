@@ -7,6 +7,7 @@ RUN npm install
 ENV PATH="./node_modules/.bin:$PATH"
 
 COPY . ./
+RUN npx browserslist@latest --update-db
 RUN npm run build
 
 FROM nginx:1.17-alpine
