@@ -1,12 +1,16 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
-import App from './components/App';
+const Greeting = () => {
+  return <div>Hey there!</div>;
+};
 
 const Routes = () => (
-  <BrowserRouter history={createBrowserHistory}>
-    <Route path="/" component={App} />
-  </BrowserRouter>
+  <Router history={createBrowserHistory}>
+    <Route path="/greet" component={Greeting} />
+    <Route path="/greet2" component={Greeting} />
+    <Route path="/greet3" component={Greeting} />
+  </Router>
 );
 
 export default Routes;

@@ -4,6 +4,7 @@ class App extends Component {
         return (
             <div className="ui container">
                 My Simple App
+                {this.props.children}
             </div>
         )
     }
