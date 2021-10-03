@@ -8,6 +8,8 @@ A reactjs ⚛️ application where try to refactoring and update the legacy proj
 
 Netlify: [https://reactjs-blog-web.netlify.app/](https://reactjs-blog-web.netlify.app/)
 
+Firebase 🔥: [https://reactjs-post-web.web.app/](https://reactjs-post-web.web.app/)
+
 Vercel: [https://reactjs-blog-web.vercel.app/](https://reactjs-blog-web.vercel.app/)
 
 Github: [https://zearkiatos.github.io/reactjs-blog-web/](https://zearkiatos.github.io/reactjs-blog-web/)
