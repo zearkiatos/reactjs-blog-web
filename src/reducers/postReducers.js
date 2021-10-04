@@ -1,13 +1,16 @@
-import {  POST_TYPES } from '../types'
+import { POST_TYPES } from "../types";
 const INITIAL_STATE = {
-    all: [],
-    post: null
+  all: [],
+  post: null,
 };
 
 const postReducers = function (state = INITIAL_STATE, action) {
   switch (action.type) {
     case POST_TYPES.FETCH_POSTS:
-
+      return {
+        ...state,
+        all: action.payload.data,
+      };
     default:
       return state;
   }
