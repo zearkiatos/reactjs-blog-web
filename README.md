@@ -12,6 +12,8 @@ Firebase 🔥: [https://reactjs-post-web.web.app/](https://reactjs-post-web.web.
 
 Vercel: [https://reactjs-blog-web.vercel.app/](https://reactjs-blog-web.vercel.app/)
 
+Render 📄: [https://reactjs-blog-web.onrender.com](https://reactjs-blog-web.onrender.com/)
+
 Github: [https://zearkiatos.github.io/reactjs-blog-web/](https://zearkiatos.github.io/reactjs-blog-web/)
 
 Gitlab🦊: [https://caprilespe.gitlab.io/reactjs-blog-web/](https://caprilespe.gitlab.io/reactjs-blog-web/)
