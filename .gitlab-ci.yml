@@ -59,7 +59,7 @@ build-app:
     - echo "PUBLIC_URL=${PUBLIC_URL}" >> .env
     - echo "REACT_APP_REDUXBLOG_API_BASE_URL=${REACT_APP_REDUXBLOG_API_BASE_URL}" >> .env
     - echo "REACT_APP_REDUXBLOG_API_KEY=${REACT_APP_REDUXBLOG_API_KEY}" >> .env
-    - npm run build
+    - npm run build:ci
   artifacts:
     expire_in: 1hr
     paths:
