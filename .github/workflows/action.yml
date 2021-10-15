@@ -36,7 +36,7 @@ jobs:
     - name: Build docker 🐳
       run: docker build . -t=reactjs-blog-web:ghb-$GITHUB_RUN_NUMBER
     - name: Build
-      run: npm run build
+      run: npm run build:ci
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
       with:

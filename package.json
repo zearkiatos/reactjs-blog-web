@@ -28,6 +28,7 @@
     "start:watch": "nodemon start",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:ci": "CI=false npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run server\" \"npm run start:watch\"",
