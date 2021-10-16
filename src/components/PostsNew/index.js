@@ -4,8 +4,17 @@ import { bindActionCreators } from "redux";
 import { Field, reduxForm } from "redux-form";
 import { Link } from 'react-router-dom';
 import { postActions } from '../../actions';
+import history from '../../history';
 
 class PostsNew extends Component {
+  onSubmit(props) {
+    this.props.createPost(props).then(() => {
+      // blog post has been created, navigate the user to the index
+      // We nagigate by calling this.context.router.push with the
+      // new path to navigate to.
+      history.push('/');
+    });
+  }
   render() {
     const renderInput = ({ input, name, label, type, meta: { touched, error } }) => (
       <div className={`field  ${touched && error ? 'error' : ''}`}>
@@ -31,12 +40,12 @@ class PostsNew extends Component {
       invalid
     } = this.props;
     return (
-      <form className="ui form" onSubmit={() => handleSubmit(this.props.createPost)}>
+      <form className="ui form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <h3>Create a New Post</h3>
         <Field name="title" label="Title" component={renderInput} type="text" />
 
         <Field name="categories" label="Categories" component={renderInput} type="text" />
-        
+
         <Field name="content" component={renderTextArea} label="Content" />
         <button type="submit" className="ui primary button" disabled={invalid}>
           Submit
@@ -49,18 +58,18 @@ class PostsNew extends Component {
   }
 }
 
-function validate (values) {
+function validate(values) {
   const errors = {};
 
-  if(!values.title) {
+  if (!values.title) {
     errors.title = 'Enter a title';
   }
 
-  if(!values.categories) {
+  if (!values.categories) {
     errors.categories = 'Enter a categories';
   }
 
-  if(!values.content) {
+  if (!values.content) {
     errors.content = 'Enter some content';
   }
 

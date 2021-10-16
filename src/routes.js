@@ -1,8 +1,7 @@
 import { Router, Route } from "react-router-dom";
-import { createBrowserHistory } from "history";
 import PostsIndex from './components/PostsIndex';
 import PostsNew from './components/PostsNew';
-const history = createBrowserHistory();
+import history from './history';
 
 const Routes = () => (
   <Router history={history}>
