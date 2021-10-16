@@ -1,28 +1,30 @@
 import React, { Component } from "react";
-import { reduxForm } from "redux-form";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Field, reduxForm } from "redux-form";
+import { postActions } from '../../actions';
 
 class PostsNew extends Component {
   render() {
     const {
-      fields: { title, categories, content },
       handleSubmit,
     } = this.props;
     return (
-      <form className="ui form" onSubmit={handleSubmit}>
+      <form className="ui form" onSubmit={() => handleSubmit(this.props.createPost)}>
         <h3>Create a New Post</h3>
         <div className="field">
           <label>Title</label>
-          <input type="text" name="title" {...title} />
+          <Field name="title" component="input" type="text" />
         </div>
 
         <div className="field">
           <label>Categories</label>
-          <input type="text" name="categories" {...categories}/>
+          <Field name="categories" component="input" type="text" />
         </div>
 
         <div className="field">
           <label>Content</label>
-          <textarea name="content" {...content}></textarea>
+          <Field name="content" component="textarea" />
         </div>
         <button type="submit" className="ui primary button">
           Submit
@@ -32,7 +34,11 @@ class PostsNew extends Component {
   }
 }
 
+// connect: First argument is mapStateToProps, 2nd is mapDispatchToProps
+// reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ createPost: postActions.createPost }, dispatch)
+};
 export default reduxForm({
-  form: "PostsNewForm",
-  fields: ["title", "categories", "content"],
-})(PostsNew);
+  form: "PostsNewForm"
+})(connect(null, mapDispatchToProps)(PostsNew));

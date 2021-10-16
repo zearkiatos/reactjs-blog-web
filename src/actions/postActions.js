@@ -4,12 +4,23 @@ import config from '../config';
 
 const fetchPosts = () => {
     const request = axios.get(`${config.REDUXBLOG_API_BASE_URL}/api/posts?key=${config.REDUXBLOG_API_KEY}`);
-   return  {
-    type: POST_TYPES.FETCH_POSTS,
-    payload: request
-   };
+
+    return {
+        type: POST_TYPES.FETCH_POSTS,
+        payload: request
+    };
 };
 
+const createPost = (properties) => {
+    const request = axios.post(`${config.REDUXBLOG_API_BASE_URL}/api/posts?key=${config.REDUXBLOG_API_KEY}`, properties);
+
+    return {
+        type: POST_TYPES.CREATE_POST,
+        payload: request
+    }
+}
+
 export default {
-    fetchPosts
+    fetchPosts,
+    createPost
 }
