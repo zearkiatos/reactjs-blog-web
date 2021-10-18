@@ -15,7 +15,7 @@ class PostsIndex extends Component {
           <div className="ui one column grid">
             <div className="row">
               <div className="sixteen wide column">
-                <Link to={`posts/${post.id}`}>
+                <Link to={`post/${post.id}`}>
                   <span className="ui right floated">{post.categories}</span>
                   <div className="header">{post.title}</div>
                 </Link>

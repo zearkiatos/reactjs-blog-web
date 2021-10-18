@@ -8,7 +8,7 @@ const Routes = () => (
   <Router history={history}>
     <Route path="/" component={PostsIndex} exact />
     <Route path="/posts/new" component={PostsNew} exact />
-    <Route path="/posts/:id" component={PostsShow} />
+    <Route path="/post/:id" component={PostsShow} exact />
   </Router>
 );
 

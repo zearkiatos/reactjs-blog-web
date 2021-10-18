@@ -4,11 +4,21 @@ import { bindActionCreators } from "redux";
 import { postActions } from "../../actions";
 
 class PostsShow extends Component {
-  shouldComponentUpdate() {
-    this.props.fetchPost(this.post.match.params.id);
+  componentWillMount() {
+    this.props.fetchPost(this.props.match.params.id);
   }
   render() {
-    return <div>Show post {this.props.match.params.id}</div>;
+    const { post } = this.props;
+    if (post) {
+      return (
+        <div>
+          <h3>{post.title}</h3>
+          <h6>Categories: {post.categories}</h6>
+          <p>{post.content}</p>
+        </div>
+      );
+    }
+    return <div>Loading...</div>;
   }
 }
 
@@ -21,4 +31,10 @@ const mapDispatchToProps = (dispatch) => {
   );
 };
 
-export default connect(null, mapDispatchToProps)(PostsShow);
+const mapStateToProps = (state) => {
+  return {
+    post: state.posts.post,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostsShow);
