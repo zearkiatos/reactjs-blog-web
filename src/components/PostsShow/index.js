@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { postActions } from "../../actions";
 import { Link } from "react-router-dom";
+import history from '../../history';
+import { postActions } from "../../actions";
 
 class PostsShow extends Component {
   componentWillMount() {
     this.props.fetchPost(this.props.match.params.id);
   }
   onDeleteClick = () => {
-    this.props.deletePost(this.props.match.params.id);
+    this.props.deletePost(this.props.match.params.id).then(() => {
+      history.push('/');
+    });;
   };
   render() {
     const { post } = this.props;
